@@ -15,8 +15,7 @@
                     smallCells[i].innerText = '';
                 }
             }
-            opts.bus.trigger('reset-game');
+            bus.trigger('reset-game');
         }
-
     </script>
 </reset>

@@ -75,6 +75,7 @@
             for (let i = 0; i < cells.length; i++) {
                 cells[i].innerText = '';
                 cells[i].style.removeProperty('background-color');
+                cells[i].classList.remove("win-slot");
                 cells[i].addEventListener('click', turnClick);
             }
             document.querySelector("#current-turn").innerText = currentPlayer;
@@ -135,13 +136,12 @@
                 if (winCombos[gameWon.index].includes(i)) {
                     cell.style.backgroundColor =
                         (gameWon.currentPlayer == player1) ? "blue" : "red";
-                    //cell.classList.add("win-slot")
+                    cell.classList.add("win-slot")
                 }
                 else {
                     cell.style.backgroundColor =
                         gameWon.currentPlayer == player1 ? "lightblue" : "lightcoral";
                 }
-                //cells[i].removeEventListener('click', turnClick);
             }
 
             let cell = document.getElementById(cells[0].id[0]);
@@ -149,8 +149,6 @@
             cell.classList.add(currentPlayer);
             cell.style.backgroundColor =
                 (gameWon.currentPlayer == player1) ? "lightblue" : "lightcoral";
-            /*cell.innerHTML = currentPlayer;  */
-
             checkBigWin();
         }
 
