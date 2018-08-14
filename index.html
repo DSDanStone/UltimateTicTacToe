@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ultimate Tic Tac Toe</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/riot@3.11/riot+compiler.min.js"></script>
+
+</head>
+
+<body>
+    <center>Current Turn:
+        <div id="current-turn"></div>
+    </center>
+
+    <center>
+        <table id="big-board">
+            <tr>
+                <td class="big-cell active-board" id="0">
+                    <board bid="0"></board>
+                </td>
+                <td class="big-cell active-board" id="1">
+                    <board bid="1"></board>
+                </td>
+                <td class="big-cell active-board" id="2">
+                    <board bid="2"></board>
+                </td>
+            </tr>
+            <tr>
+                <td class="big-cell active-board" id="3">
+                    <board bid="3"></board>
+                </td>
+                <td class="big-cell active-board" id="4">
+                    <board bid="4"></board>
+                </td>
+                <td class="big-cell active-board" id="5">
+                    <board bid="5"></board>
+                </td>
+            </tr>
+            <tr>
+                <td class="big-cell active-board" id="6">
+                    <board bid="6"></board>
+                </td>
+                <td class="big-cell active-board" id="7">
+                    <board bid="7"></board>
+                </td>
+                <td class="big-cell active-board" id="8">
+                    <board bid="8"></board>
+                </td>
+            </tr>
+        </table>
+    </center>
+
+    <center>
+        <a href="https://en.wikipedia.org/wiki/Ultimate_tic-tac-toe#Rules">Rules</a>
+    </center>
+    <center>
+        <reset></reset>
+    </center>
+
+    <div id="endgame"></div>
+    <script src="board.tag" type="riot/tag"></script>
+
+    <script>
+        let bus = {};
+        let settings = {
+            bus: bus
+        };
+        riot.observable(bus);
+        riot.mount('board', settings);
+        riot.mount('reset', settings);
+    </script>
+    <!--<script src="script.js"></script>-->
+</body>
+
+</html>
