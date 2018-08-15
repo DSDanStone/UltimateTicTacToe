@@ -1,6 +1,6 @@
 # UltimateTicTacToe
 
-##Rules
+## Rules
 
 Each small 3-by-3 tic-tac-toe board is referred to as a local board, and the larger 3-by-3 board is referred to as the global board.
 
