@@ -15,10 +15,10 @@
                 let smallCells = bigCells[i].querySelectorAll(".small-cell");
                 for (let i = 0; i < smallCells.length; i++) {
                     smallCells[i].style.removeProperty('background-color');
-
                     smallCells[i].innerText = '';
                 }
             }
+            document.querySelector('#endgame').style.display = "none";
             bus.trigger('reset-game');
         }
     </script>
